@@ -1,0 +1,11 @@
+name = input("What is your name? ")
+output("Hello,", name + "!")
+tes = 5
+tes *= 4
+output(tes++) // -> 20
+output(++tes) // -> 22
+tes++
+tes--
+name += " is cool!"
+output(name)
+output("Length of name:", name.length)

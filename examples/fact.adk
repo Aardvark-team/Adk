@@ -1,0 +1,9 @@
+funct factorial(x) {
+  if x == 1 {
+    return x
+  }
+
+  return x * factorial(x - 1)
+}
+
+output(factorial(5)) // -> 120

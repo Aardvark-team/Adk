@@ -1,0 +1,14 @@
+class Test {
+  ~init() {
+    this.x = 5
+  }
+
+  funct cool() {
+    output(this.x);
+  }
+};
+
+y = Test()
+output(y.x)
+
+y.cool()

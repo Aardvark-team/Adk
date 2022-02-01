@@ -1,0 +1,55 @@
+&consts:
+
+
+&consts_end:
+
+__internal_main__():
+
+
+  push 40
+  push 1
+  call fib(x)
+
+  push 1
+  push 0
+  syscall
+
+  halt
+
+fib(x):
+  storelcls 1
+
+
+fib(x)_label0:
+  
+  push 1
+  getlocal 0
+  cmp_lte
+  jmp_nt fib(x)_label1
+  
+  getlocal 0
+  return
+  jmp fib(x)_label0
+fib(x)_label1:
+  
+
+
+
+  push 1
+  getlocal 0
+  const_sub
+  
+  push 1
+  call fib(x)
+
+
+  push 2
+  getlocal 0
+  const_sub
+  
+  push 1
+  call fib(x)
+
+  const_add
+  
+  return

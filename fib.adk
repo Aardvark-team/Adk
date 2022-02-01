@@ -1,0 +1,9 @@
+funct fib(x) {
+  while x<=1 {
+    return x
+  }
+
+  return fib(x -2) + fib(x -1)
+}
+
+output(fib(40))

@@ -1,0 +1,31 @@
+class Thing {
+    ~init() {
+        this.x=0
+        this.y=0
+        this.z=0
+        this.width=0
+        this.height=0
+        this.length=0
+    }
+    funct moveBy1InAllDirections() {this.x++;this.y++;this.z++;output(this.x)}
+    funct teleport(x, y, z) {
+        this.x=x
+        this.y=y
+        this.z=z
+    }
+    funct scale(amt) {
+        //Scale
+        this.width *= amt
+        this.height *= amt
+        this.length *= amt
+        // Move the object so that its center is in the same postition
+        this.x += this.width - this.width / amt
+        this.y += this.height - this.height / amt
+        this.z += this.length - this.length / amt
+    }
+}
+
+a = Thing()
+a.teleport(85,29,74)
+a.moveBy1InAllDirections()
+output(a.x, a.y, a.z)

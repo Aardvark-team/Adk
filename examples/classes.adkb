@@ -1,0 +1,152 @@
+&consts:
+
+4, String, "Hello, World!"
+0, Object, { ~init(), cool() }
+3, String, "cool"
+2, String, "x"
+5, String, "z"
+6, String, "z"
+1, String, "~init()"
+
+&consts_end:
+
+__internal_main__():
+
+  push 0
+  new 0
+  load_const 1
+  invokemethod
+  setglobal 0
+
+  getglobal 0
+  
+  load_const 2
+  getfield
+  push 1
+  push 0
+  syscall
+
+  
+  
+  push 0
+  getglobal 0
+  load_const 3
+  invokemethod
+  
+  
+  push 0
+  getglobal 0
+  load_const 3
+  invokemethod
+  getglobal 0
+  
+  load_const 2
+  push 4
+  setfield
+  load_const 2
+  getfield
+
+  getglobal 0
+  
+  load_const 2
+  getfield
+  push 1
+  push 0
+  syscall
+
+  
+  
+  push 0
+  getglobal 0
+  load_const 3
+  invokemethod
+
+  getglobal 0
+  
+  load_const 2
+  getfield
+  push 1
+  push 0
+  syscall
+
+  getglobal 0
+  
+  load_const 5
+  load_const 4
+  setfield
+  load_const 5
+  getfield
+
+  getglobal 0
+  
+  load_const 5
+  getfield
+  push 1
+  push 0
+  syscall
+
+
+  getglobal 0
+  push 1
+  call coolio(obj)
+  load_const 6
+  setglobal 1
+
+  getglobal 0
+  
+  getglobal 1
+  getfield
+  push 1
+  push 0
+  syscall
+
+  halt
+
+cool():
+  storelcls 0
+
+
+
+  getlocal 0
+  
+  load_const 2
+  getfield
+  push 1
+  push 0
+  syscall
+
+
+  getlocal 0
+  
+  load_const 2
+  push 3
+  setfield
+  load_const 2
+  getfield
+  return
+
+coolio(obj):
+  storelcls 1
+
+
+  
+  
+  push 0
+  getlocal 0
+  load_const 3
+  invokemethod
+  return
+
+~init():
+  storelcls 0
+
+
+  getlocal 0
+  
+  load_const 2
+  push 5
+  setfield
+  load_const 2
+  getfield
+  getlocal 0
+  return

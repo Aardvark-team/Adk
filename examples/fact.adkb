@@ -1,0 +1,46 @@
+&consts:
+
+
+&consts_end:
+
+__internal_main__():
+
+
+  push 5
+  push 1
+  call factorial(x)
+
+  push 1
+  push 0
+  syscall
+
+  halt
+
+factorial(x):
+  storelcls 1
+
+
+  push 1
+  getlocal 0
+  cmp_eq
+  jmp_nt factorial(x)_label1
+
+  getlocal 0
+  return
+factorial(x)_label1:
+factorial(x)_label2:
+  
+
+
+
+  push 1
+  getlocal 0
+  const_sub
+  
+  push 1
+  call factorial(x)
+
+  getlocal 0
+  const_mul
+  
+  return

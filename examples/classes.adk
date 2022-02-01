@@ -1,0 +1,32 @@
+class Test {
+  ~init() {
+    this.x = 5
+  }
+
+  funct cool() {
+    output(this.x)
+    this.x = 3
+  }
+};
+
+y = Test()
+output(y.x) // -> 5
+
+y.cool() // -> 5
+y.cool() // -> 3
+y.x = 4
+output(y.x) // -> 4
+y.cool() // -> 4
+output(y.x) // -> 3
+
+y.z = "Hello, World!"
+output(y.z) // -> "Hello, World!"
+
+funct coolio(obj) {
+  obj.cool() // -> 3
+}
+
+coolio(y) // -> 3
+
+tester = "z"
+output(y[tester]) // -> "Hello, World!"

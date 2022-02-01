@@ -1,0 +1,15 @@
+funct test(x, y) {
+  output("World!")
+
+  output(x)
+  output(y)
+}
+
+x = "Test"
+
+output("Hello")
+test(5, 4)
+output(x)
+
+x = "cool"
+output(x)

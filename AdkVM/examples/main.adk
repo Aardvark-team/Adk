@@ -1,0 +1,26 @@
+//
+Equivalent:
+LD_CONST 0    ; "Hello, World"
+PUSH 1
+PUSH 0
+SYSCALL
+HALT
+\\
+output("Hello, World")
+
+
+
+//
+Not impleidnted or dec\\ed on impl
+\\
+#include test.adk
+
+
+//
+class String {
+  ~init() {}
+
+  length() {
+    return this.length;
+  }
+};

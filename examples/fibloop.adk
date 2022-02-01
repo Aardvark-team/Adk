@@ -1,0 +1,19 @@
+funct fib(x) {
+  a = 0
+  b = 1
+  temp = 0
+
+  i = 0
+
+  while i < x {
+    temp = b
+    b = a + b
+    a = temp
+
+    i++
+  }
+
+  return a
+}
+
+output(fib(30)) // -> 832040

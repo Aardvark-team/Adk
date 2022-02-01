@@ -1,0 +1,7 @@
+#include fib.adk // Only builtin modules will use its module name as the identifier
+
+output("Hi")
+
+y = "test"
+
+output(y)

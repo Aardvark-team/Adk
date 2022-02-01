@@ -1,0 +1,88 @@
+&consts:
+
+3, String, " is cool!"
+1, String, "!"
+2, String, "Hello,"
+5, String, "Length of name:"
+0, String, "What is your name? "
+4, String, "length"
+
+&consts_end:
+
+__internal_main__():
+
+  load_const 0
+  push 1
+  push 1
+  syscall
+
+  setglobal 0
+
+  load_const 1
+  getglobal 0
+  const_add
+  
+  load_const 2
+  push 2
+  push 0
+  syscall
+  push 5
+  setglobal 1
+  getglobal 1
+  push 4
+  const_mul
+  setglobal 1
+
+  getglobal 1
+
+  getglobal 1
+  push 1
+  const_add
+  setglobal 1
+  push 1
+  push 0
+  syscall
+
+
+  getglobal 1
+  push 1
+  const_add
+  setglobal 1
+  getglobal 1
+  push 1
+  push 0
+  syscall
+
+  getglobal 1
+
+  getglobal 1
+  push 1
+  const_add
+  setglobal 1
+  getglobal 1
+
+  push 1
+  getglobal 1
+  const_sub
+  setglobal 1
+  load_const 3
+  getglobal 0
+  const_add
+  setglobal 0
+
+  getglobal 0
+  push 1
+  push 0
+  syscall
+
+
+  getglobal 0
+  
+  load_const 4
+  getfield
+  load_const 5
+  push 2
+  push 0
+  syscall
+
+  halt

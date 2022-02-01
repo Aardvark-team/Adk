@@ -1,0 +1,25 @@
+&consts:
+
+0, String, "/home/runner/Adk/examples/fib.adkc"
+1, String, "Hi"
+2, String, "test"
+
+&consts_end:
+
+__internal_main__():
+
+  load_const 0
+  import 
+  load_const 1
+  push 1
+  push 0
+  syscall
+  load_const 2
+  setglobal 0
+
+  getglobal 0
+  push 1
+  push 0
+  syscall
+
+  halt

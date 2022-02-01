@@ -1,0 +1,161 @@
+&consts:
+
+1, String, "TEST"
+0, Object, { ~init(), moveBy1InAllDirections(), teleport(x,y,z) }
+6, String, "height"
+7, String, "length"
+5, String, "width"
+2, String, "x"
+3, String, "y"
+4, String, "z"
+
+&consts_end:
+
+__internal_main__():
+
+  push 0
+  call moveBy1InAllDirections()
+
+  halt
+
+moveBy1InAllDirections():
+  storelcls 0
+
+
+  load_const 1
+  push 1
+  push 0
+  syscall
+
+  return
+
+moveBy1InAllDirections():
+  storelcls 0
+
+
+  getlocal 0
+  
+  dupe
+  load_const 2
+push 1
+  const_add
+  setfield
+  load_const 2
+  getfield
+
+  getlocal 0
+  
+  dupe
+  load_const 3
+push 1
+  const_add
+  setfield
+  load_const 3
+  getfield
+
+  getlocal 0
+  
+  dupe
+  load_const 4
+push 1
+  const_add
+  setfield
+  load_const 4
+  getfield
+
+
+  getlocal 0
+  
+  load_const 2
+  getfield
+  push 1
+  push 0
+  syscall
+
+  return
+
+teleport(x,y,z):
+  storelcls 3
+
+
+  getlocal 0
+  
+  load_const 2
+
+  getlocal 0
+  setfield
+  load_const 2
+  getfield
+
+  getlocal 0
+  
+  load_const 3
+
+  getlocal 1
+  setfield
+  load_const 3
+  getfield
+
+  getlocal 0
+  
+  load_const 4
+
+  getlocal 2
+  setfield
+  load_const 4
+  getfield
+  return
+
+~init():
+  storelcls 0
+
+
+  getlocal 0
+  
+  load_const 2
+  push 0
+  setfield
+  load_const 2
+  getfield
+
+  getlocal 0
+  
+  load_const 3
+  push 0
+  setfield
+  load_const 3
+  getfield
+
+  getlocal 0
+  
+  load_const 4
+  push 0
+  setfield
+  load_const 4
+  getfield
+
+  getlocal 0
+  
+  load_const 5
+  push 0
+  setfield
+  load_const 5
+  getfield
+
+  getlocal 0
+  
+  load_const 6
+  push 0
+  setfield
+  load_const 6
+  getfield
+
+  getlocal 0
+  
+  load_const 7
+  push 0
+  setfield
+  load_const 7
+  getfield
+  getlocal 0
+  return
