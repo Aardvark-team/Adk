@@ -268,7 +268,7 @@ namespace Aardvark {
       if (curChar == '/' && peek() == '/') {
         advance();
         advance();
-        //if (isWhitespace(curChar) && peek() == '\n') advance();
+        if (isWhitespace(curChar) && peek() == '\n') advance();
         //Just incase they put a space after the //
         if (curChar == '\n') {
           advance();

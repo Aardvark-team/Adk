@@ -1,1 +1,1 @@
-run = "chmod 777 makeexample.sh"
+run = "chmod 777 makeexample.sh && chmod 777 AdkC/bin/main && chmod 777 AdkASM/bin/adkasm && chmod 777 AdkVM/bin/adkvm"

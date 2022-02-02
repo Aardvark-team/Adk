@@ -1,6 +1,6 @@
 { pkgs }: {
     deps = [
-        pkgs.gcc11
+        pkgs.gcc
         pkgs.valgrind
         pkgs.gdb
     ];
